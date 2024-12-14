@@ -10,18 +10,18 @@
     "tauri": "tauri dev"
   },
   "dependencies": {
-    "@tauri-apps/plugin-shell": "^2",
-    "autoprefixer": "^10.4.20",
-    "element-plus": "^2.9.0",
-    "postcss": "^8.4.49",
-    "primeicons": "^7.0.0",
-    "tailwindcss": "^3.4.16",
-    "tailwindcss-primeui": "^0.3.4",
     "@primevue/themes": "^4.2.5",
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
+    "@tauri-apps/plugin-shell": "^2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "primeicons": "^7.0.0",
     "primevue": "^4.2.5",
-    "vue": "^3.5.13"
+    "tailwindcss": "^3.4.16",
+    "tailwindcss-primeui": "^0.3.4",
+    "vue": "^3.5.13",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@primevue/auto-import-resolver": "^4.2.5",
