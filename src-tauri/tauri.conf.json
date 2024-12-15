@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "liu_tauri",
+  "productName": "test-app",
   "version": "0.1.0",
-  "identifier": "com.liu_tauri.app",
+  "identifier": "com.test-app.app",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:1420",
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "liu_tauri",
+        "title": "test-app",
         "width": 800,
         "height": 600
       }

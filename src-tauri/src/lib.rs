@@ -3,7 +3,6 @@ use std::env::current_dir;
 use std::fmt::{Debug, Pointer};
 use std::path::Path;
 use std::time::UNIX_EPOCH;
-use srtlib::Subtitles;
 
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
@@ -57,18 +56,18 @@ fn  query_path(path:&str)-> Paths{
 
     Paths{current_path,files}
 }
-#[tauri::command]
-fn read_srt(path: &str) {
-    let mut subs = Subtitles::parse_from_file(path,None).unwrap();
-    for x in subs {
-        println!("{}",x.text)
-    }
-}
+// #[tauri::command]
+// fn read_srt(path: &str) {
+//     let mut subs = Subtitles::parse_from_file(path,None).unwrap();
+//     for x in subs {
+//         println!("{}",x.text)
+//     }
+// }
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
-        .plugin(tauri_plugin_shell::init())
-        .invoke_handler(tauri::generate_handler![query_path,read_srt])
+        .plugin(tauri_plugin_opener::init())
+        .invoke_handler(tauri::generate_handler![query_path])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

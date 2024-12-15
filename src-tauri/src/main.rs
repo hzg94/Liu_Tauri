@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    liu_tauri_lib::run()
+    test_app_lib::run()
 }
